@@ -53,9 +53,12 @@ public class WebdriverMethod {
 		maleRadioButton.click();
 		isSelected  = maleRadioButton.isSelected();
 		System.out.println("After clicking on male radion button isSelected status - "+isSelected);
+		
 		//Browser methods
+		
 		//1)close
 		driver.close(); // close one window tab where driver is pointing 
+		
 		//2)quit
 		driver.quit(); // close all open windows tab
 		
