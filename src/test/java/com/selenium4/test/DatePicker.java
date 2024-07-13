@@ -1,6 +1,8 @@
 package com.selenium4.test;
 
 import java.time.Duration;
+import org.openqa.selenium.JavascriptExecutor;
+
 import java.time.Month;
 import java.util.List;
 
@@ -8,6 +10,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
@@ -26,24 +30,26 @@ public class DatePicker {
 		
 		datePickerApproach_2(driver);
 		
-		//driver.quit();
+		driver.quit();
 	}
 
 	public static void datePickerApproach_2(WebDriver driver) {
 		driver.get("https://testautomationpractice.blogspot.com/");
 		driver.switchTo().frame("frame-one796456169"); //switching to iframe using id
-		String year = "1999";
-		String month ="July";
+		String year = "1996";
+		String month ="October";
 		String date = "11";
 		
 		//Clicking on date picker
-		driver.findElement(By.xpath("//span[@class='icon_calendar']")).click();
+		WebElement element=driver.findElement(By.xpath("//span[@class='icon_calendar' and @role='button']"));
+		 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+		 element.click();
 		
 		//Selecting year
-//		WebElement yearDropdown = driver.findElement(By.xpath("//span[@class='icon_calendar']"));
-//		Select sel = new Select(yearDropdown);
-//		sel.selectByVisibleText(year);
-//		System.out.println("Year selected - "+year);
+		WebElement yearDropdown = driver.findElement(By.xpath("//select[@class='ui-datepicker-year']"));
+		Select sel = new Select(yearDropdown);
+		sel.selectByVisibleText(year);
+		System.out.println("Year selected - "+year);
 		
 		//Selecting month
 		while(true) {
@@ -52,13 +58,13 @@ public class DatePicker {
 			Month convertedExpectedMonth = convertMonth(month);
 			int comparisionResults = convertedActualMonth.compareTo(convertedExpectedMonth);
 			
-			if(comparisionResults>0) {
+			if(comparisionResults<0) {
 				//Future month
-				driver.findElement(By.xpath("ui-icon ui-icon-circle-triangle-e")).click();//Next
+				driver.findElement(By.xpath("//span[@class='ui-icon ui-icon-circle-triangle-e']")).click();//Next
 			}
-			else if(comparisionResults<0) {
+			else if(comparisionResults>0) {
 				//Past month
-				driver.findElement(By.xpath("ui-icon ui-icon-circle-triangle-w")).click();//Prev
+				driver.findElement(By.xpath("//span[@class='ui-icon ui-icon-circle-triangle-w']")).click();//Prev
 			}
 			else {
 				System.out.println("Month selected - "+month);
