@@ -9,6 +9,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.WindowType;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
@@ -19,13 +20,23 @@ public class KeyBoardActions {
 		driver.manage().window().maximize();
 		
 		// 1. Copy Past Operation 
-		//keyBoardActionOne(driver);
+		keyBoardActionOne(driver);
 		
 		//2. Opening another tab using key board actions
 		openNewTab(driver);
 		
+		//3. Tabs and windows
+		openNewTabAndOpen(driver);
+		
 		Thread.sleep(5000);
 		driver.quit();
+	}
+
+	private static void openNewTabAndOpen(WebDriver driver) {
+		driver.get("https://demo.nopcommerce.com/");
+		//driver.switchTo().newWindow(WindowType.TAB); //This will open new tab
+		driver.switchTo().newWindow(WindowType.WINDOW); //This will open new browser
+		driver.get("https://text-compare.com/");
 	}
 
 	private static void openNewTab(WebDriver driver) {
