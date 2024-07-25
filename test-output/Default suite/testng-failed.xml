@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestNg.HARSvsSOFT_Assertions">
+      <class name="TestNg.Dependancey_Demo">
         <methods>
-          <include name="softAssertionFail"/>
-          <include name="hardAssertionFail"/>
+          <include name="Test2"/>
+          <include name="Test1"/>
+          <include name="Test3"/>
         </methods>
-      </class> <!-- TestNg.HARSvsSOFT_Assertions -->
+      </class> <!-- TestNg.Dependancey_Demo -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
