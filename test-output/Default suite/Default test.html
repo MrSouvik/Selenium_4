@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/1/1</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Jul 25 21:30:23 IST 2024</td>
+<td>Started on:</td><td>Sat Aug 03 21:39:45 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (48 ms)</td>
+<tr><td>Total time:</td><td>15 seconds (15558 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,11 +75,15 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='TestNg.Dependancey_Demo.Test2()'><b>Test2</b><br>Test class: TestNg.Dependancey_Demo</td>
-<td><div><pre>java.lang.AssertionError: null
+<td title='TestNG_Listener.MyTest.testTitle()'><b>testTitle</b><br>Test class: TestNG_Listener.MyTest</td>
+<td><div><pre>java.lang.AssertionError: expected [OrangeHR] but found [OrangeHRM]
 	at org.testng.Assert.fail(Assert.java:99)
-	at org.testng.Assert.fail(Assert.java:106)
-	at TestNg.Dependancey_Demo.Test2(Dependancey_Demo.java:17)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at TestNG_Listener.MyTest.testTitle(MyTest.java:33)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -108,11 +112,15 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1640296160", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1640296160'><pre>java.lang.AssertionError: null
+</pre></div><a href='#' onClick='toggleBox("stack-trace778806426", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace778806426'><pre>java.lang.AssertionError: expected [OrangeHR] but found [OrangeHRM]
 	at org.testng.Assert.fail(Assert.java:99)
-	at org.testng.Assert.fail(Assert.java:106)
-	at TestNg.Dependancey_Demo.Test2(Dependancey_Demo.java:17)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at TestNG_Listener.MyTest.testTitle(MyTest.java:33)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -143,7 +151,7 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>0</td>
-<td>TestNg.Dependancey_Demo@3e84448c</td></tr>
+<td>TestNG_Listener.MyTest@485966cc</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -153,10 +161,10 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='TestNg.Dependancey_Demo.Test1()'><b>Test1</b><br>Test class: TestNg.Dependancey_Demo</td>
+<td title='TestNG_Listener.MyTest.testLogo()'><b>testLogo</b><br>Test class: TestNG_Listener.MyTest</td>
 <td></td>
 <td>0</td>
-<td>TestNg.Dependancey_Demo@3e84448c</td></tr>
+<td>TestNG_Listener.MyTest@485966cc</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -166,8 +174,8 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='TestNg.Dependancey_Demo.Test3()'><b>Test3</b><br>Test class: TestNg.Dependancey_Demo</td>
-<td><div><pre>java.lang.Throwable: Method Dependancey_Demo.Test3()[pri:3, instance:TestNg.Dependancey_Demo@3e84448c] depends on not successfully finished methods
+<td title='TestNG_Listener.MyTest.testURL()'><b>testURL</b><br>Test class: TestNG_Listener.MyTest</td>
+<td><div><pre>java.lang.Throwable: Method MyTest.testURL()[pri:3, instance:TestNG_Listener.MyTest@485966cc] depends on not successfully finished methods
 	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
@@ -187,8 +195,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace272678513", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace272678513'><pre>java.lang.Throwable: Method Dependancey_Demo.Test3()[pri:3, instance:TestNg.Dependancey_Demo@3e84448c] depends on not successfully finished methods
+</pre></div><a href='#' onClick='toggleBox("stack-trace406358588", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace406358588'><pre>java.lang.Throwable: Method MyTest.testURL()[pri:3, instance:TestNG_Listener.MyTest@485966cc] depends on not successfully finished methods
 	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
@@ -210,7 +218,7 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>0</td>
-<td>TestNg.Dependancey_Demo@3e84448c</td></tr>
+<td>TestNG_Listener.MyTest@485966cc</td></tr>
 </table><p>
 </body>
 </html>
